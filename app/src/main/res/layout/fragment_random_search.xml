@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.random.RandomSearchFragment">
+
+    <TextView
+        android:id="@+id/headRandomTextView"
+        style="@style/text_view_header"
+        android:text="@string/random_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/randomItemNameTextView"
+        style="@style/text_view_item_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headRandomTextView"
+        tools:text="Пикачу" />
+
+    <TextView
+        android:id="@+id/random_item_id"
+        style="@style/text_view_item_model"
+        android:text="@string/item_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomItemNameTextView" />
+
+    <TextView
+        android:id="@+id/randomItemIdTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/random_item_id"
+        app:layout_constraintTop_toBottomOf="@+id/randomItemNameTextView"
+        tools:text="9999" />
+
+    <TextView
+        android:id="@+id/random_item_base_experience"
+        style="@style/text_view_item_model"
+        android:text="@string/item_base_experience"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/random_item_id" />
+
+    <TextView
+        android:id="@+id/randomItemBaseExperienceTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/random_item_base_experience"
+        app:layout_constraintTop_toBottomOf="@+id/random_item_id"
+        tools:text="55555" />
+
+    <TextView
+        android:id="@+id/random_item_height"
+        style="@style/text_view_item_model"
+        android:text="@string/item_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/random_item_base_experience" />
+
+    <TextView
+        android:id="@+id/randomItemHeightTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/random_item_height"
+        app:layout_constraintTop_toBottomOf="@+id/random_item_base_experience"
+        tools:text="125" />
+
+    <TextView
+        android:id="@+id/random_item_weight"
+        style="@style/text_view_item_model"
+        android:text="@string/item_weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/random_item_height" />
+
+    <TextView
+        android:id="@+id/randomItemWeightTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/random_item_weight"
+        app:layout_constraintTop_toBottomOf="@+id/random_item_height"
+        tools:text="76" />
+
+    <Button
+        android:id="@+id/randomFindButton"
+        style="@style/button"
+        android:text="@string/button_random_find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/random_item_weight" />
+
+    <Button
+        android:id="@+id/randomSaveButton"
+        style="@style/button"
+        android:text="@string/button_random_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomFindButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

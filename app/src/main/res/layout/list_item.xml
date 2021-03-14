@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/main_margin"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/main_padding">
+
+        <TextView
+            android:id="@+id/itemNameTextView"
+            style="@style/text_view_item_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Пикачу" />
+
+        <TextView
+            android:id="@+id/item_id"
+            style="@style/text_view_item_model"
+            android:text="@string/item_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemNameTextView" />
+
+        <TextView
+            android:id="@+id/itemIdTextView"
+            style="@style/text_view_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_id"
+            app:layout_constraintTop_toBottomOf="@+id/itemNameTextView"
+            tools:text="9999" />
+
+        <TextView
+            android:id="@+id/item_base_experience"
+            style="@style/text_view_item_model"
+            android:layout_marginTop="16dp"
+            android:text="@string/item_base_experience"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_id" />
+
+        <TextView
+            android:id="@+id/itemBaseExperienceTextView"
+            style="@style/text_view_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_base_experience"
+            app:layout_constraintTop_toBottomOf="@+id/item_id"
+            tools:text="55555" />
+
+        <TextView
+            android:id="@+id/item_height"
+            style="@style/text_view_item_model"
+            android:text="@string/item_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_base_experience" />
+
+        <TextView
+            android:id="@+id/itemHeightTextView"
+            style="@style/text_view_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_height"
+            app:layout_constraintTop_toBottomOf="@+id/item_base_experience"
+            tools:text="125" />
+
+        <TextView
+            android:id="@+id/item_weight"
+            style="@style/text_view_item_model"
+            android:text="@string/item_weight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_height" />
+
+        <TextView
+            android:id="@+id/itemWeightTextView"
+            style="@style/text_view_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_weight"
+            app:layout_constraintTop_toBottomOf="@+id/item_height"
+            tools:text="76" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

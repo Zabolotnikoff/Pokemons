@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Pokemons</string>
+    <string name="item_id">id:</string>
+    <string name="item_base_experience">base experience:</string>
+    <string name="item_height">height:</string>
+    <string name="item_weight">weight:</string>
+    <string name="edit_text_name">Name</string>
+    <string name="header">Поиск покемонов</string>
+    <string name="random_header">Поиск случайного покемона</string>
+    <string name="by_name_header">Поиск покемона по имени</string>
+    <string name="button_random_find">Найти случайного покемона</string>
+    <string name="button_by_name_find">Найти покемона по имени</string>
+    <string name="button_random_save">Сохранить покемона</string>
+    <string name="button_by_name_save">Сохранить покемона</string>
+    <string name="button_random_search">Поиск случайного покемона</string>
+    <string name="button_by_name_search">Поиск покемона по имени</string>
+    <string name="button_to_list">Посмотреть список покемонов</string>
+
+    <string name="action_random_search">Случайный поиск</string>
+    <string name="action_by_name_search">Поиск по имени</string>
+    <string name="toolbar_title">Работа с PokeAPI</string>
+
+</resources>
+

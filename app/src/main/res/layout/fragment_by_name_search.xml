@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.byname.ByNameSearchFragment">
+
+    <TextView
+        android:id="@+id/headByNameTextView"
+        style="@style/text_view_header"
+        android:text="@string/by_name_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/byNameItemNameTextView"
+        style="@style/text_view_item_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headByNameTextView"
+        tools:text="Пикачу" />
+
+    <TextView
+        android:id="@+id/by_name_item_id"
+        style="@style/text_view_item_model"
+        android:text="@string/item_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/byNameItemNameTextView" />
+
+    <TextView
+        android:id="@+id/byNameItemIdTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/by_name_item_id"
+        app:layout_constraintTop_toBottomOf="@+id/byNameItemNameTextView"
+        tools:text="9999" />
+
+    <TextView
+        android:id="@+id/by_name_item_base_experience"
+        style="@style/text_view_item_model"
+        android:text="@string/item_base_experience"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/by_name_item_id" />
+
+    <TextView
+        android:id="@+id/byNameItemBaseExperienceTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/by_name_item_base_experience"
+        app:layout_constraintTop_toBottomOf="@+id/by_name_item_id"
+        tools:text="55555" />
+
+    <TextView
+        android:id="@+id/by_name_item_height"
+        style="@style/text_view_item_model"
+        android:layout_marginTop="16dp"
+        android:text="@string/item_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/by_name_item_base_experience" />
+
+    <TextView
+        android:id="@+id/byNameItemHeightTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/by_name_item_height"
+        app:layout_constraintTop_toBottomOf="@+id/by_name_item_base_experience"
+        tools:text="125" />
+
+    <TextView
+        android:id="@+id/by_name_item_weight"
+        style="@style/text_view_item_model"
+        android:text="@string/item_weight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/by_name_item_height" />
+
+    <TextView
+        android:id="@+id/byNameItemWeightTextView"
+        style="@style/text_view_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/by_name_item_weight"
+        app:layout_constraintTop_toBottomOf="@+id/by_name_item_height"
+        tools:text="76" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        android:autofillHints=""
+        android:hint="@string/edit_text_name"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/item_normal_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/by_name_item_weight"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/byNameFindButton"
+        style="@style/button"
+        android:text="@string/button_by_name_find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <Button
+        android:id="@+id/byNameSaveButton"
+        style="@style/button"
+        android:text="@string/button_by_name_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/byNameFindButton" />
+
+    <Button
+        android:id="@+id/buttonHardBind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Обновить данные из вьюмодели"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHardNull"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <Button
+        android:id="@+id/buttonHardNull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Обнулить данные во вьюмодели"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/byNameSaveButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

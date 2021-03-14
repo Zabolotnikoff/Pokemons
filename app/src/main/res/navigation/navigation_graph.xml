@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.pokemons.screens.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.pokemons.screens.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_nameFindFragment"
+            app:destination="@id/byNameSearchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_randomFindFragment"
+            app:destination="@id/randomSearchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/byNameSearchFragment"
+        android:name="com.example.pokemons.screens.byname.ByNameSearchFragment"
+        android:label="fragment_by_name_search"
+        tools:layout="@layout/fragment_by_name_search">
+        <action
+            android:id="@+id/action_nameFindFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/randomSearchFragment"
+        android:name="com.example.pokemons.screens.random.RandomSearchFragment"
+        android:label="fragment_random_search"
+        tools:layout="@layout/fragment_random_search">
+        <action
+            android:id="@+id/action_randomFindFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.pokemons.screens.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_graph" />
+    </fragment>
+</navigation>

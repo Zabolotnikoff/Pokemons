@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.main.MainFragment">
+
+    <TextView
+        android:id="@+id/headTextView"
+        style="@style/text_view_header"
+        android:text="@string/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_pokemon_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headTextView" />
+
+    <Button
+        android:id="@+id/byNameSearchButton"
+        style="@style/button"
+        android:text="@string/button_by_name_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImageView" />
+
+    <Button
+        android:id="@+id/randomSearchButton"
+        style="@style/button"
+        android:text="@string/button_random_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/byNameSearchButton" />
+
+    <Button
+        android:id="@+id/toListButton"
+        style="@style/button"
+        android:text="@string/button_to_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomSearchButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
