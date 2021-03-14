@@ -54,7 +54,7 @@ class ByNameSearchFragment : Fragment() {
         }
 
         buttonHardBind.setOnClickListener {
-            byNameViewModel.newPokemonLiveData?.value?.let { it1 -> bindPokemon(it1) }
+            byNameViewModel.newPokemonLiveData?.value?.let (::bindPokemon)
         }
     }
 
