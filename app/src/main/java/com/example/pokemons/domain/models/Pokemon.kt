@@ -11,22 +11,22 @@ data class Pokemon(
 
     @PrimaryKey(autoGenerate = false)
     @SerializedName("id")
-    var id: Int,
+    var id: Int? = null,
 
     @ColumnInfo
     @SerializedName("name")
-    var name: String,
+    var name: String? = null,
 
     @ColumnInfo
     @SerializedName("base_experience")
-    var baseExperience: Int,
+    var baseExperience: Int? = null,
 
     @ColumnInfo
     @SerializedName("height")
-    var height: Int,
+    var height: Int? = null,
 
     @ColumnInfo
     @SerializedName("weight")
-    var weight: Int
+    var weight: Int? = null
 
 ) : Serializable

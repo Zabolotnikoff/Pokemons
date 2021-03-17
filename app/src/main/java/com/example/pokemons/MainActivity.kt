@@ -3,6 +3,7 @@ package com.example.pokemons
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.pokemons.data.database.room.AppRoomDatabase
@@ -39,5 +40,9 @@ class MainActivity : AppCompatActivity() {
         NETWORK_REPOSITORY = WebApiRepository()
         DATABASE_REPOSITORY =
             AppRoomRepository(AppRoomDatabase.getInstance(ACTIVITY).getAppRoomDao())
+    }
+
+    private fun showToast(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 }

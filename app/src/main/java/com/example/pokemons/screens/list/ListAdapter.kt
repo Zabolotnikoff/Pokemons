@@ -10,11 +10,11 @@ import kotlinx.android.synthetic.main.list_item.view.*
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
-    private var pokemonList: MutableList<Pokemon> = mutableListOf()
+    private var pokeList: MutableList<Pokemon> = mutableListOf()
 
-    fun setPokemonList(newList: List<Pokemon>) {
-        pokemonList.clear()
-        pokemonList.addAll(newList)
+    fun setPokeList(newPokeList: List<Pokemon>) {
+        pokeList.clear()
+        pokeList.addAll(newPokeList)
 
         notifyDataSetChanged()
     }
@@ -24,12 +24,12 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(pokemonList[position])
+    override fun getItemCount(): Int {
+        return pokeList.count()
     }
 
-    override fun getItemCount(): Int {
-        return pokemonList.count()
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(pokeList[position])
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

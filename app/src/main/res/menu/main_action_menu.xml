@@ -7,13 +7,13 @@
     <item
         android:id="@+id/toRandomButton"
         android:orderInCategory="100"
-        android:title="@string/button_random_search"
+        android:title="Какое-нибудь действие..."
         app:showAsAction="never" />
     <item
         android:id="@+id/toByNameButton"
         android:icon="@drawable/ic_random_search"
         android:orderInCategory="100"
-        android:title="@string/button_by_name_search"
+        android:title="Ещё одно действие... ;)"
         app:showAsAction="never" />
 </menu>
 

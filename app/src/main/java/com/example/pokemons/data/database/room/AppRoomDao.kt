@@ -11,9 +11,9 @@ interface AppRoomDao {
     fun getAllPokemons(): LiveData<List<Pokemon>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun  insert(pokemon: Pokemon)
+    suspend fun insertPokemon(pokemon: Pokemon)
 
     @Delete
-    suspend fun  delete(pokemon: Pokemon)
+    suspend fun deletePokemon(pokemon: Pokemon)
 
 }

@@ -7,7 +7,7 @@ interface DatabaseRepository {
 
     val allPokemons: LiveData<List<Pokemon>>
 
-    suspend fun insert(pokemon: Pokemon, onSuccess: () -> Unit)
+    suspend fun insert(pokemon: Pokemon, callback: () -> Unit)
 
-    suspend fun delete(pokemon: Pokemon, onSuccess: () -> Unit)
+    suspend fun delete(pokemon: Pokemon, callback: () -> Unit)
 }

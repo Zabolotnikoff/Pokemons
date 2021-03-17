@@ -13,22 +13,25 @@ abstract class WebApiClient {
 
         private var retrofit: Retrofit? = null
 
-        fun getWebApiClient(): Retrofit {
+        fun getInstance(): Retrofit? {
             if (retrofit == null) {
+
                 val gson = GsonBuilder()
                     .setLenient()
                     .create()
                 val okHttpClient = OkHttpClient.Builder()
-                    .readTimeout(5, TimeUnit.SECONDS)
-                    .connectTimeout(5, TimeUnit.SECONDS)
+                    .readTimeout(2, TimeUnit.SECONDS)
+                    .connectTimeout(2, TimeUnit.SECONDS)
                     .build()
+
                 retrofit = Retrofit.Builder()
                     .baseUrl(BASEURL)
                     .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build()
             }
-            return retrofit!!
+
+            return retrofit
         }
     }
 }

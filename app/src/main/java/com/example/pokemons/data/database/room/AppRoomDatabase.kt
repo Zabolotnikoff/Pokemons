@@ -26,6 +26,7 @@ abstract class AppRoomDatabase() : RoomDatabase() {
                     "poke_database"
                 ).build()
             }
+
             return database as AppRoomDatabase
         }
     }

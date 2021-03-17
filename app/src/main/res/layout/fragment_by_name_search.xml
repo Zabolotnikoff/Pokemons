@@ -113,26 +113,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/byNameFindButton" />
 
-    <Button
-        android:id="@+id/buttonHardBind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Обновить данные из вьюмодели"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHardNull"
-        app:layout_constraintVertical_bias="0.101" />
-
-    <Button
-        android:id="@+id/buttonHardNull"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Обнулить данные во вьюмодели"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/byNameSaveButton" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
