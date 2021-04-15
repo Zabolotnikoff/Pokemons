@@ -21,7 +21,6 @@
         android:layout_marginTop="32dp"
         android:src="@mipmap/ic_pokemon_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headTextView" />
 

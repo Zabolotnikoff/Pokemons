@@ -13,6 +13,11 @@ class AppRoomRepository(private val appRoomDao: AppRoomDao) : DatabaseRepository
         callback()
     }
 
+    override suspend fun update(pokemon: Pokemon, callback: () -> Unit) {
+        appRoomDao.updatePokemon(pokemon)
+        callback()
+    }
+
     override suspend fun delete(pokemon: Pokemon, callback: () -> Unit) {
         appRoomDao.deletePokemon(pokemon)
         callback()

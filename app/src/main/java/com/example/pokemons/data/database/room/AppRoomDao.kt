@@ -13,7 +13,11 @@ interface AppRoomDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertPokemon(pokemon: Pokemon)
 
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun updatePokemon(pokemon: Pokemon)
+
     @Delete
     suspend fun deletePokemon(pokemon: Pokemon)
-
 }
+
+

@@ -9,5 +9,7 @@ interface DatabaseRepository {
 
     suspend fun insert(pokemon: Pokemon, callback: () -> Unit)
 
+    suspend fun update(pokemon: Pokemon, callback: () -> Unit)
+
     suspend fun delete(pokemon: Pokemon, callback: () -> Unit)
 }

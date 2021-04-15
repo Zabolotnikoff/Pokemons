@@ -11,11 +11,13 @@ abstract class WebApiClient {
 
     companion object {
 
+        @Volatile
         private var retrofit: Retrofit? = null
 
+        @Synchronized
         fun getInstance(): Retrofit? {
-            if (retrofit == null) {
 
+            if (retrofit == null) {
                 val gson = GsonBuilder()
                     .setLenient()
                     .create()
